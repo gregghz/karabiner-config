@@ -106,10 +106,16 @@
                         "description": "Option + b to Option + left",
                         "manipulators": [{
                             "type": "basic",
-                            "conditions": [{
-                                "bundle_identifiers": ["org.gnu.Emacs"],
-                                "type": "frontmost_application_unless"
-                            }],
+                            "conditions": [
+                                {
+                                    "bundle_identifiers": ["org.gnu.Emacs"],
+                                    "type": "frontmost_application_unless"
+                                },
+                                {
+                                    "bundle_identifiers": ["com.googlecode.iterm2"],
+                                    "type": "frontmost_application_unless"
+                                }
+                            ],
                             "from": {
                                 "key_code": "b",
                                 "modifiers": {"mandatory": ["option"]}
@@ -124,10 +130,16 @@
                         "description": "Option + f to Option + right",
                         "manipulators": [{
                             "type": "basic",
-                            "conditions": [{
-                                "bundle_identifiers": ["org.gnu.Emacs"],
-                                "type": "frontmost_application_unless"
-                            }],
+                            "conditions": [
+                                {
+                                    "bundle_identifiers": ["org.gnu.Emacs"],
+                                    "type": "frontmost_application_unless"
+                                },
+                                {
+                                    "bundle_identifiers": ["com.googlecode.iterm2"],
+                                    "type": "frontmost_application_unless"
+                                }
+                            ],
                             "from": {
                                 "key_code": "f",
                                 "modifiers": {"mandatory": ["option"]}
@@ -178,10 +190,12 @@
                                 "type": "basic"
                             },
                             {
-                                "conditions": [{
-                                    "bundle_identifiers": ["org.gnu.Emacs"],
-                                    "type": "frontmost_application_unless"
-                                }],
+                                "conditions": [
+                                    {
+                                        "bundle_identifiers": ["org.gnu.Emacs"],
+                                        "type": "frontmost_application_unless"
+                                    }
+                                ],
                                 "from": {
                                     "key_code": "b",
                                     "modifiers": {
